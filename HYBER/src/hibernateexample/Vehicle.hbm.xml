@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 30, 2016 12:36:27 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="hibernateexample.Bus" table="Bus" catalog="17_kin12058303" optimistic-lock="version">
+        <meta attribute ="class-description"> This class contains the employee info </meta>
+        <id name="id" type="int" column="Busid">
+           <generator class="native" />
+        </id>
+        <property name="Transmission" type="string">
+            <column name="Transmission" length="255" />
+        </property>
+        <property name="Extras" type="string">
+            <column name="Extras" length="255" />
+        </property>
+    </class>
+   
+      <class name="hibernateexample.Van" table="Van" catalog="17_kin12058303" optimistic-lock="version">
+        <meta attribute ="class-description"> This class contains the employee info </meta>
+        <id name="id" type="int" column="Vanid">
+           <generator class="native" />
+        </id>
+        <property name="Transmission" type="string">
+            <column name="Transmission" length="255" />
+        </property>
+         <property name="Extras" type="string">
+            <column name="Extras" length="255"/>
+        </property>
+    </class>
+   
+   
+   
+         <class name="hibernateexample.Motorbike" table="Motorbike" catalog="17_kin12058303" optimistic-lock="version">
+        <meta attribute ="class-description"> This class contains the employee info </meta>
+        <id name="id" type="int" column="Motorbikeid">
+           <generator class="native" />
+        </id>
+        <property name="EngineSize" type="string">
+            <column name="EngineSize" length="255" />
+        </property>
+        <property name="Extras" type="string">
+            <column name="Extras" length="255"/>
+        </property>
+    </class>
+   
+           <class name="hibernateexample.Car" table="Car" catalog="17_kin12058303" optimistic-lock="version">
+        <meta attribute ="class-description"> This class contains the employee info </meta>
+        <id name="id" type="int" column="Carid">
+           <generator class="native" />
+        </id>
+        <property name="Transmission" type="string">
+            <column name="Transmission" length="255" />
+        </property>
+        <property name="Extras" type="string">
+            <column name="Extras" length="255"/>
+        </property>
+    </class>
+   
+   
+     <class name="hibernateexample.Vehicle" table="vehicle" catalog="17_kin12058303" optimistic-lock="version">
+        <meta attribute ="class-description"> This class contains the employee info </meta>
+        <id name="id" type="int" column="Vehicleid">
+           <generator class="native" />
+        </id>
+        <property name="carcar" type="int">
+            <column name="Carid"  />
+        </property>
+        <property name="busbus" type="int">
+            <column name="Busid"  />
+        </property>
+        <property name="motorbikemotorbike" type="int">
+            <column name="Motorbikeid"  />
+        </property>
+        <property name="vanvan" type="int">
+            <column name="Vanid"  />
+        </property>
+        <property name="Transmission" type="string">
+            <column name="Transmission" length="255" />
+        </property>
+        <property name="Extras" type="string">
+            <column name="Extras" length="255"/>
+        </property>
+        
+    </class>
+   
+   
+</hibernate-mapping>

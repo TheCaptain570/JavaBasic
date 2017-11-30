@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 30, 2016 12:36:27 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="hibernateexample.Bus" table="Bus" catalog="17_kin12058303" optimistic-lock="version">
+        <meta attribute ="class-description"> This class contains the employee info </meta>
+        <id name="id" type="int" column="Busid">
+           <generator class="native" />
+        </id>
+
+        <property name="Transmission" type="string">
+            <column name="Transmission" length="255" />
+        </property>
+        <property name="Extras" type="int">
+            <column name="Extras" />
+        </property>
+  
+    </class>
+   
+</hibernate-mapping>
